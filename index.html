@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Анонимные посты</title>
+</head>
+<body>
+    <h1>Анонимные посты</h1>
+
+    <div id="theme-toggle">
+        <button onclick="toggleTheme()">Сменить тему</button>
+    </div>
+
+    <div id="admin-area" style="display: none;">
+        <h2>Админский доступ</h2>
+        <input type="text" id="admin-code" placeholder="Введите код">
+        <button onclick="checkAdminCode()">Войти</button>
+        <div id="admin-controls" style="display: none;">
+            <h3>Создание темы</h3>
+            <input type="text" id="topic-name" placeholder="Имя темы">
+            <button onclick="createTopic()">Создать тему</button>
+        </div>
+    </div>
+
+    <div id="registration-area">
+        <h2>Регистрация</h2>
+        <input type="text" id="username" placeholder="Введите имя пользователя">
+        <button onclick="registerUser()">Зарегистрироваться</button>
+    </div>
+
+    <div id="topic-list"></div>
+    
+    <h3>Добавить пост</h3>
+    <input type="text" id="post-content" placeholder="Ваш пост">
+    <button onclick="addPost()">Добавить пост</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
